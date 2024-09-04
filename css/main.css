@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+html {scroll-behavior: smooth;}
+body {font-size: 100%; background-color: #f7f7f7; font-family: 'Noto Sans KR', sans-serif;}
+* {font-family: 'Noto Sans KR', sans-serif; color: #222; letter-spacing: -0.05em; box-sizing: border-box;}
+img {width: 100%; max-width: 100%; height: 100%; object-fit: cover;}
+video {width: 100%; max-width: 100%; height: 100%; object-fit: cover;}
+
+.swiper {width: 100%; height: 100%;}
+.swiper-slide img {display: block; width: 100%; height: 100%; object-fit: cover;}

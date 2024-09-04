@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #000;
+        height: 6000px;
+    }
+
+    div {
+        margin-top: 1000px;
+        color: #fff;
+        text-align: center;
+        opacity: 0;
+        transition: all 2s;
+    }
+</style>
+
+<body>
+    <div><h1>iPhone 15 출시</h1></div>
+    <div><h1>충전포트를 USB-C 타입으로 바꿔달라고요?</h1></div>
+    <div><h1>그래서 충전포트를 제거했습니다.</h1></div>
+    <div><img src="img/img.jpg" alt="증명사진"></div>
+</body>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script>
+    let observer = new IntersectionObserver((e) => {
+        e.forEach((박스) => {
+            if (박스.isIntersecting){
+                박스.target.style.opacity = 1;
+            } else {
+                박스.target.style.opacity = 0;
+            }
+        })
+    });
+
+    let div = document.querySelectorAll('div')
+    observer.observe(div[0])
+    observer.observe(div[1])
+    observer.observe(div[2])
+    observer.observe(div[3])
+</script>
+</html>

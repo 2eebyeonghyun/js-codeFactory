@@ -1,0 +1,55 @@
+$f100: Pretendard-Thin;
+$f200: Pretendard-ExtraLight;
+$f300: Pretendard-Light;
+$f400: Pretendard-Regular;
+$f500: Pretendard-Medium;
+$f600: Pretendard-SemiBold;
+$f700: Pretendard-Bold;
+$f800: Pretendard-ExtraBold;
+$f900: Pretendard-Black;
+
+$mainColor: #222;
+
+$url: "../img/";
+
+$w430: 430px;
+$w768: 768px;
+$w1240: 1240px;
+$w1710: 1710px;
+
+// responsive 영역
+@mixin w430 {
+    @media (max-width: #{$w430}) {
+        @content;
+    }
+}
+
+@mixin w768 {
+    @media (max-width: #{$w768}) {
+        @content;
+    }
+}
+
+@mixin w1240 {
+    @media (max-width: #{$w1240}) {
+        @content;
+    }
+}
+
+@mixin w1710 {
+    @media (max-width: #{$w1710}) {
+        @content;
+    }
+}
+
+// inner 영역
+@mixin inner {
+    max-width: 1710px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include w1710 {
+        max-width: 95%;
+        padding: 0;
+    }
+}

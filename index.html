@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<style>
+    .header .nav .navi > li {width: 100%; margin-bottom: 50px;}
+    .header .nav .navi > li > a {font-size: 30px; color: #333;}
+    .header .nav .navi > li .submenu{display: none;}
+    .header .nav .navi > li .submenu > li > a{font-size: 18px; color: #333;}
+</style>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="navi">
+                <li>
+                    <a href="#none">소개</a>
+                    <ul class="submenu">
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><a href="#none">3</a></li>
+                        <li><a href="#none">4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#none">소개2</a>
+                    <ul class="submenu">
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                        <li><a href="#none">3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#none">소개3</a>
+                    <ul class="submenu">
+                        <li><a href="#none">1</a></li>
+                        <li><a href="#none">2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script>
+    jQuery(document).ready(function(){
+        $('.navi > li').mouseover(function(){
+            $(this).find('.submenu').stop().slideDown(500);
+        }).mouseout(function(){
+            $(this).find('.submenu').stop().slideUp(500);
+        })
+    })
+</script>
+</html>
